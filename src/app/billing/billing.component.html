@@ -1,0 +1,24 @@
+<h2>Liste des Factures</h2>
+
+<h4> A date de : {{ bills.billingDate }} </h4>
+
+
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-light">
+        <th>ProductItemsID</th><th>ProductItems Quantity</th><th>ProductItems Price</th><th>Product Name</th>
+        <th>Product Price</th><th>Product Quantity</th>
+        </thead>
+
+        <tr *ngFor="let bill of bills.productItems">
+          <td>{{ bill.id }}</td>
+          <td>{{ bill.quantity }}</td>
+          <td>{{ bill.price }}</td>
+          <td>{{ bill.product.name }}</td>
+          <td>{{ bill.product.price }}</td>
+          <td>{{ bill.product.quantity }}</td>
+        </tr>
+      </table>
+
+</div>

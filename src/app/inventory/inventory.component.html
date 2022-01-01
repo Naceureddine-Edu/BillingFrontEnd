@@ -1,0 +1,19 @@
+
+<h2>Liste des Produits</h2>
+
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-light">
+        <th>ID</th><th>name</th><th>price</th><th>quantity</th>
+        </thead>
+      
+        <tr *ngFor="let product of products._embedded.products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.quantity }}</td>
+        </tr>
+      </table>
+
+</div>
